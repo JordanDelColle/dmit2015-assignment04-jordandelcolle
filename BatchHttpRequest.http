@@ -1,0 +1,26 @@
+### Start a new batch job
+POST http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/batch-jobs/job
+
+### Check the status of batch job 1
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/batch-jobs/1
+
+### Send request for number of EdmontonPropertyAssessment objects
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/EdmontonPropertyAssessments/count
+
+### Send request for all EdmontonPropertyAssessment objects
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/EdmontonPropertyAssessments
+
+### Send request for EdmontonPropertyAssessment with accountNumber of 1298587
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/EdmontonPropertyAssessments/1298587
+
+### Get the EdmontonPropertyAssessment by longitude -113.35023446875456, latitude 53.47287377003312, distance 50
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/EdmontonPropertyAssessments/query/within?longitude=-113.35023446875456&latitude=53.47287377003312&distance=50
+
+### Get the EdmontonPropertyAssessment by byHouseNumberAndStreetName, houseNumber 523, streetName 37 AVENUE NW
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/EdmontonPropertyAssessments/query/byHouseNumberAndStreetName?houseNumber=523&streetName=37%20AVENUE%20NW
+
+### Get the EdmontonPropertyAssessment by byNeighbourhood RUTHERFORD
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/EdmontonPropertyAssessments/query/byNeighbourhood?neighbourhood=RUTHERFORD
+
+### Get the EdmontonPropertyAssessment by byNeighbourhoodAndAssessedValueRange, neighbourhood RUTHERFORD, minValue 350000, maxValue 450000
+GET http://localhost:8080/dmit2015-assignment04-jordandelcolle/webapi/EdmontonPropertyAssessments/query/byNeighbourhoodAndAssessedValueRange?neighbourhood=RUTHERFORD&minValue=350000&maxValue=450000
